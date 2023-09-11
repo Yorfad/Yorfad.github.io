@@ -323,6 +323,7 @@
   }
   .contenedor--tecnologias__tarjetas {
     width: 80%;
+    heigth: 1000px;
   }
   .contenedor--tecnologias__tarjetas {
     padding: 8%;
