@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="sass/login.css">
+    <script src="login.js" defer></script>
+    <script src="https://kit.fontawesome.com/4bb22f668e.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <header class="menu">
+
+        <div class="menu menu__icono--menu" >
+            <svg class="icono" viewBox="0 0 448 512">
+                <path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/>
+            </svg>
+        </div>
+
+        <div class="menu menu-desplegable__fondo">
+
+            <nav class="menu menu__nav--desplegable">
+
+                <svg class="icono icono--usuario-circular" viewBox="0 0 512 512">
+                    <path d="M399 384.2C376.9 345.8 335.4 320 288 320H224c-47.4 0-88.9 25.8-111 64.2c35.2 39.2 86.2 63.8 143 63.8s107.8-24.7 143-63.8zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zm256 16a72 72 0 1 0 0-144 72 72 0 1 0 0 144z"/>
+                </svg>
+
+                <ul class="menu menu-ul__botones-nav--desplegable">
+
+                    <li class="menu menu-li__botones-nav--desplegable">
+                        <svg class="icono icono--flecha-sub-menu" viewBox="0 0 320 512">
+                            <path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"/>
+                        </svg>
+                        <a href="#" class="botonMenu botonMenu--sub-menu-productos">
+                             productos
+                        </a>
+                        <ul class="sub-menu sub-menu-productos--desplegable">
+                            <li class="sub-menu sub-menu-item-productos"><a href="#">Computadoras</a></li>
+                            <li class="sub-menu sub-menu-item-productos"><a href="#">Libros</a></li>
+                            <li class="sub-menu sub-menu-item-productos"><a href="#">Hogar</a></li>
+                            <li class="sub-menu sub-menu-item-productos"><a href="#">Ofecina</a></li>
+                            <li class="sub-menu sub-menu-item-productos"><a href="#">Videojuegos</a></li>
+                            <li class="sub-menu sub-menu-item-productos"><a href="#">Electronicos</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="menu menu-li__botones-nav--desplegable">
+                        <a href="#" class="botonMenu botonMenu--menuDesplegable">Productos recien ingreso</a>
+                    </li>
+
+                    <li class="menu menu-li__botones-nav--desplegable">
+                        <a href="#" class="botonMenu botbotonMenuon--menuDesplegable">Ubicaciones</a>
+                    </li>
+
+                    <li class="menu menu-li__botones-nav--desplegable">
+                        <a href="#" class="botonMenu botonMenu--menuDesplegable">mayoreo</a>
+                    </li>
+
+                    <li class="menu menu-li__botones-nav--desplegable">
+                        <a href="#" class="botonMenu botonMenu--menuDesplegable">servicio Al cliente</a>
+                    </li>
+
+                    <li class="menu menu-li__botones-nav--desplegable">
+                        <a href="#" class="botonMenu botonMenu--menuDesplegable">Promociones</a>
+                    </li>
+
+                </ul>
+
+            </nav>
+                
+        </div>
+
+
+        <a href="carritoDeCompras.html" class="menu menu__logo--pequeño">
+            <img src="logo3.png" class="logo">
+        </a>
+
+        <form action="" class="formulario formulario--busqueda">  
+
+            <input type="text" placeholder="Buscar..." class="input input__formulario--grande">
+
+            <button type="submit" class="botonMenu botonMenu-formulario--buscar">
+
+                <svg class="icono icono--buscar" viewBox="0 0 512 512">
+                    <path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/>
+                </svg>
+
+            </button>
+
+        </form>
+
+        <a onclick="location.href='login.html?action=login'">
+            <svg class="icono icono--usuario" viewBox="0 0 448 512">
+
+                <path d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z"/>
+
+            </svg>
+        </a>
+        
+        <a href="">
+            <svg class="icono icono--carrito" viewBox="0 0 576 512">
+
+                <path d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96zM252 160c0 11 9 20 20 20h44v44c0 11 9 20 20 20s20-9 20-20V180h44c11 0 20-9 20-20s-9-20-20-20H356V96c0-11-9-20-20-20s-20 9-20 20v44H272c-11 0-20 9-20 20z"/>
+
+            </svg>
+        </a>
+             
+
+        <nav class="menu menu__nav--imferior">
+
+            <ul class="menu menu-ul__botones-nav--inferior">
+
+                <li class="menu menu-li__botones-nav--inferior">
+                    <svg class="icono icono--flecha-sub-menu" viewBox="0 0 320 512">
+                        <path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"/>
+                    </svg>
+                    <a href="#" class="botonMenu botonMenu--sub-menu-productos">
+                         productos
+                    </a>
+                    <ul class="sub-menu sub-menu-inferior--inferior">
+                        <li class="sub-menu sub-menu-item-productos"><a href="#">Computadoras</a></li>
+                        <li class="sub-menu sub-menu-item-productos"><a href="#">Libros</a></li>
+                        <li class="sub-menu sub-menu-item-productos"><a href="#">Hogar</a></li>
+                        <li class="sub-menu sub-menu-item-productos"><a href="#">Ofecina</a></li>
+                        <li class="sub-menu sub-menu-item-productos"><a href="#">Videojuegos/a></li>
+                        <li class="sub-menu sub-menu-item-productos"><a href="#">Electronicos</a></li>
+                    </ul>
+                </li>
+
+                <li class="menu menu-li__botones-nav--inferior">
+                    <a href="#" class="botonMenu botonMenu--menuDesplegable">Inicio</a>
+                </li>
+
+                <li class="menu menu-li__botones-nav--inferior">
+                    <a href="#" class="botonMenu botonMenu--menuDesplegable">Promociones</a>
+                </li >
+
+            </ul>
+                        
+        </nav>
+    </header>
+
+    <section class="section section__formulario--log-in">
+        <form action="" class="log-in">
+            <h1 class="titulo__h1">Iniciar seción</h1>
+    
+            <input placeholder="username" type="text" class="username" id="username-log-in">
+    
+    
+            <input placeholder="password" type="password" class="password" id="password-log-in">
+            <a href="#" class="link">¿Olvido su contraseña?</a>
+    
+            <button class="boton boton__formulario" id="boton-log-in">Ingresar</button>
+    
+            <button class="boton boton__formulario--cambiar" type="button" onclick="cambiarFormulario('signup')">
+                Registrarse
+            </button>
+        </form>
+    </section>
+
+    <section class="section section__formulario--sign-up">
+        <form action="" class="sign-up">
+            <h1 class="titulo__h1">Registrarse</h1>
+    
+            <input placeholder="Ingrese su nombre" type="text" class="nombre" id="nombre-sign-up" required>
+    
+            <input placeholder="Ingrese su apellido" type="text" class="apellido" id="apellido-sign-up" required>
+    
+            <input placeholder="Ingrese su correo electronico" type="email" class="correo" id="correo-sign-up" required>
+    
+            <input placeholder="Contraseña" type="password" name="contraseña" class="contraseña" id="contraseña-sign-up" required>
+                <label for="contraseña" class="texto" id="labelContraseñaSignIn">
+                    La contraseña debe contener mínimo 1 mayúscula, número, caracteres especial (@#$%^&¿?).
+                </label>
+    
+            <input placeholder="Confirme su contraseña" type="password" name="confirmarContraseña" class="contraseña" id="confirmarContraseña-sign-up" required>
+                <label for="confirmarContraseña" class="texto" id="labelConfirmarContraseñaSignIn">
+                    Las contraseñas deben coincidir
+                </label>
+    
+            <a href="#" class="link">¿Olvido su contraseña?</a>
+    
+            <button class="boton boton__formulario" id="boton-sign-up" >Registrarse</button>
+    
+            <button class="boton boton__formulario--cambiar" type="button" onclick="cambiarFormulario('login')">
+                Iniciar seción
+            </button>
+        </form>
+    </section>
+
+</body>
+</html>
