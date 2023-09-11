@@ -1,0 +1,296 @@
+@use 'header';
+
+* {
+	margin: 0;
+	padding: 0;
+    box-sizing: border-box;
+	font-family: sans-serif;
+}
+
+.titulo{
+	font-size: 25px;
+    margin-top: 20px;
+    text-align: center;
+    max-width: 650px;
+
+    &--grande{
+        font-size: 28px !important;
+        margin: 12%;
+
+        @media (max-width: 1000px) {
+            margin: 18%;
+        }
+    }
+
+    &--mediano{
+        font-size: 20px !important;
+    }
+
+    &--pequeño{
+        font-size: 18px !important;
+        margin: 5px;
+    }
+}
+
+.contenedor{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 12px;
+
+    &--caratula{
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 0px;
+    }
+
+    &--imagenProyectos{
+        width: 100%;
+        box-sizing: border-box;
+        height: 100%;
+        background-image: url("/imagenCarrito.jpeg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        
+
+        &:hover{
+            filter: blur(15px);
+            transition: filter 1s ease-in-out;
+        }
+    }
+
+    &--metodologia{
+        justify-content: center;
+        background-color: #892CDC;
+        color:#fff;
+        width: 100%;
+        margin: 0px;
+    }
+
+    &--imagen{
+        max-height: 300px;
+        max-width: 350px;
+        min-width: 200px;
+        min-height: 150px;
+        margin-bottom: 45px;
+    }
+
+    &--imagenCaratula{
+        width: 75%;
+        justify-content: center;
+    }
+
+    &--tecnologias{
+        position: relative;
+        align-items: center;
+        width: 100%;
+        justify-content: center;
+        bottom: 50px;
+        
+
+
+        &__tarjetas{
+            padding: 10px;
+            background-color: #fff;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            justify-content: space-around;
+            text-align: center;
+            align-items: center;
+            width: 30%;
+            height: 700px;
+            border: 1px ridge rgb(168, 161, 161);
+            border-radius: 10px;
+            
+        }
+    }
+
+    &--tarjetasProyectos{
+        width: 100%;
+        justify-content: center;
+        cursor: pointer;
+    }
+
+}
+
+.cuerpo{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.imagen{
+    width: 100%;
+    height: 100%;
+
+    &--caratula{
+        max-width: 600px;
+        @media (max-width: 1000px) {
+            width: 60%;
+        }
+    }
+
+    &--tecnologias{
+        width: 200px;
+        height: 150px;
+    }
+
+}
+
+
+
+.texto{
+    font-size: 20px;
+    max-width: 900px;
+    margin: 50px;
+
+    &--descripcion{
+        font-size: 23px;
+        max-width: 1300px;
+    }
+
+    &--metodologia{
+        padding: 5%;
+        margin: 0px;
+        width: 70%;
+        text-align: justify;
+
+        @media (max-width: 1000px) {
+            width: 85%;
+            padding: none;
+        }
+        
+    }
+
+    &--proyectos{
+        font-size: 20px;
+        opacity: 0;
+        position: absolute;
+        font-weight: 700;
+        color: #2c2a2a;
+     }
+
+    &--tecnologias{
+        text-align: justify;
+        font-weight: 500;
+        font-size: 15px;
+        margin: 8px;
+    }
+
+    @media (max-width: 1000px) {
+        &--descripcion{
+            padding: 10px;
+		    margin: 20px;
+		    border: 0px;
+        }
+
+        font-size: 18px;
+    }
+}
+
+.lista li{
+    list-style: none;
+    margin: 12px 0px;
+}
+
+
+.proyectos{
+	width: 220px;
+    height: 220px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 20px;
+    justify-content: center;
+    align-items: center;
+
+    &:hover {
+        box-shadow: 2px 0px 11px 7px rgba(128,115,115,0.75);
+
+    }
+
+    &:hover p{
+        opacity: 1;
+        transition: opacity 1s ease-in-out;
+    }
+
+
+}
+
+.lista{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 5px;
+
+    &li{
+        margin: 10px 0px;
+    }
+}
+
+
+.footer {
+    background-color: #892CDC;;
+    width: 100%;
+    padding: 20px 25px;
+    height: 80px;
+}
+    
+
+
+@media (max-width: 1000px) {
+    .titulo{
+        font-size: 18px;
+        text-align: center;
+        padding: 10px;
+    
+        &--mediano{
+            font-size: 14px;
+            padding: 8px;
+        }
+    
+        &--pequeño{
+            font-size: 10px;
+            padding: 5px;
+        }
+    }
+
+    .contenedor{
+
+    
+        &--imagenCaratula{
+            width: 90%;
+            height: 175%;
+        }
+    
+        &--tecnologias{
+            flex-direction: column;
+            
+            &__tarjetas{    
+               width: 80%;
+            }
+        }
+
+        &--tecnologias__tarjetas{
+            padding: 8%;
+            width: 65%;
+        }
+    
+    }
+
+    .texto{
+        margin: 12px;
+        font-size: 20px;
+
+        &--proyectos{
+            font-size: 5px;
+        }
+    
+        &--metodologia{
+            padding: 10% 11%;
+            margin: 0px;
+        }
+    }
+}
