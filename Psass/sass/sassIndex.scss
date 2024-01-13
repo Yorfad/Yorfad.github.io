@@ -90,17 +90,22 @@
 
         &__tarjetas{
             padding: 10px;
+	    margin:8px;
             background-color: #fff;
             display: flex;
             flex-wrap: wrap;
             flex-direction: column;
-            justify-content: space-around;
+            justify-content: space-between;
             text-align: center;
             align-items: center;
-            width: 30%;
+            width: 22%;
             height: 700px;
             border: 1px ridge rgb(168, 161, 161);
             border-radius: 10px;
+
+		@media (max-width: 1000px) {
+           		width: 35%;
+        	}
             
         }
     }
@@ -177,6 +182,7 @@
         font-weight: 500;
         font-size: 15px;
         margin: 8px;
+	line-height: 3.5;
     }
 
     @media (max-width: 1000px) {
