@@ -256,7 +256,7 @@
   margin: 4px;
 }
 @media (max-width: 1000px) {
-  .texto--tecnologias--tecnologias {
+  .texto--tecnologias {
     background-color: #2c2a2a;
     margin: 20px;
     border: 0px;
