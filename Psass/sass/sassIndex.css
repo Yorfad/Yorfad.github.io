@@ -255,7 +255,7 @@
   font-weight: 500;
   font-size: 15px;
   margin: 8px;
-  line-height: 3.5;
+  line-height: 3;
 }
 @media (max-width: 1000px) {
   .texto {
