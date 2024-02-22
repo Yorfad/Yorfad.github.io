@@ -28,7 +28,7 @@
 
     &--pequeño{
         font-size: 18px !important;
-        margin: 5px;
+        margin: 2px;
     }
 }
 
@@ -165,6 +165,7 @@
         @media (max-width: 1000px) {
             width: 90%;
             padding: none;
+            font-size: 16px;
         }
         
     }
@@ -187,7 +188,7 @@
 
     @media (max-width: 1000px) {
 
-        font-size: 158px;
+        font-size: 16px;
 
         &--descripcion{
             padding: 10px;
