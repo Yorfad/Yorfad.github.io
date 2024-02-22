@@ -172,17 +172,23 @@
 }
 .contenedor--tecnologias__tarjetas {
   padding: 10px;
+  margin: 8px;
   background-color: #fff;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
   text-align: center;
   align-items: center;
-  width: 30%;
+  width: 22%;
   height: 700px;
   border: 1px ridge rgb(168, 161, 161);
   border-radius: 10px;
+}
+@media (max-width: 1000px) {
+  .contenedor--tecnologias__tarjetas {
+    width: 35%;
+  }
 }
 .contenedor--tarjetasProyectos {
   width: 100%;
@@ -232,7 +238,7 @@
 }
 @media (max-width: 1000px) {
   .texto--metodologia {
-    width: 85%;
+    width: 90%;
     padding: none;
   }
 }
@@ -248,10 +254,11 @@
   font-weight: 500;
   font-size: 15px;
   margin: 8px;
+  line-height: 3.5;
 }
 @media (max-width: 1000px) {
   .texto {
-    font-size: 18px;
+    font-size: 158px;
   }
   .texto--descripcion {
     padding: 10px;

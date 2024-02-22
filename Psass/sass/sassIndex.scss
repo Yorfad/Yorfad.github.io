@@ -163,7 +163,7 @@
         text-align: justify;
 
         @media (max-width: 1000px) {
-            width: 85%;
+            width: 90%;
             padding: none;
         }
         
@@ -186,13 +186,16 @@
     }
 
     @media (max-width: 1000px) {
+
+        font-size: 158px;
+
         &--descripcion{
             padding: 10px;
 		    margin: 20px;
 		    border: 0px;
         }
 
-        font-size: 18px;
+       
     }
 }
 
