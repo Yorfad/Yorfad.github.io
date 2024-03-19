@@ -1,5 +1,6 @@
 const contenedorCards = document.querySelector('.contenedor-cards'); 
 // html donde agregamos los productos obtenidos de la API (las que se compran)
+//que es el contenedor de las cards de los productos
 
 const templateCard = document.getElementById('template-card').content;
 // TEMPLATE que usamos para poder agregar todos los productos obtenidos por la 
@@ -30,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
           const res = await fetch('https://dummyjson.com/products/?limit=0&skip=0');
           const data = await res.json();
           console.log(data)
-          const resCategories = await fetch('https://dummyjson.com/products/categories/?limit=7&skip=13');
+          const resCategories = await fetch('https://dummyjson.com/products/categories/?limit=0');
           const dataCategories = await resCategories.json();
           
           console.log(dataCategories)
@@ -130,12 +131,7 @@ const setCarrito = item => {
     
 }
 
-const menuLiBotonesNavInferior = document.querySelector(".menu-li__botones-nav--inferior");
 
-menuLiBotonesNavInferior.addEventListener("click", () =>{
-    document.getElementById("ulSubMenuProductosInferior").classList.toggle("visible");
-
-});
 
 /* 
  Creamos una funcion flecha con nombre **setCarrito** con un parametro de nombre **item** dentro de esta
@@ -160,6 +156,8 @@ menuLiBotonesNavInferior.addEventListener("click", () =>{
 const iconoMenu = document.querySelector(".menu__icono--menu");
 const menuDesplegable = document.querySelector(".menu__nav--desplegable")
 const menuDesplegableFondo = document.querySelector(".menu-desplegable__fondo")
+const menuDesplegableProductos = document.getElementById("menuDesplegableProductos");
+
 
 const toggleMenu = () => {
     menuDesplegable.classList.toggle("visible");
@@ -168,5 +166,30 @@ const toggleMenu = () => {
 };
   
 iconoMenu.addEventListener("click", toggleMenu);
-menuDesplegableFondo.addEventListener("click", toggleMenu);
 
+menuDesplegableFondo.addEventListener("click",  () =>{
+    if( menuDesplegable.classList.contains("visible")){
+        menuDesplegable.classList.toggle("visible");
+        menuDesplegableFondo.classList.toggle("visible");
+        document.body.style.overflow = menuDesplegable.classList.contains("visible") ? "hidden" : "auto";
+
+    }
+
+
+    if(getComputedStyle(ulSubMenuProductosInferior).getPropertyValue('display') === 'flex'){
+        document.getElementById("ulSubMenuProductosInferior").classList.toggle("visible");
+        menuDesplegableFondo.classList.toggle("visible");
+        document.body.style.overflow = menuDesplegable.classList.contains("visible") ? "hidden" : "auto";
+        console.log("hola")
+    }
+    
+});
+
+
+
+menuDesplegableProductos.addEventListener("click", () =>{
+    ulSubMenuProductosInferior.classList.toggle("visible");
+    menuDesplegableFondo.classList.toggle("visible");
+    document.body.style.overflow = menuDesplegable.classList.contains("visible") ? "hidden" : "auto";
+
+});
