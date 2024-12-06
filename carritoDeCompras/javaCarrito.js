@@ -333,6 +333,7 @@ const menuDesplegable = document.querySelector(".menu__nav--desplegable")
 const menuDesplegableFondo = document.querySelector(".menu-desplegable__fondo")
 
 
+
 const toggleMenu = () => {
     menuDesplegable.classList.toggle("visible");
     menuDesplegableFondo.classList.toggle("visible");

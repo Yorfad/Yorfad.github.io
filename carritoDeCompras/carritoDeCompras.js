@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 */
 
-const pintarcategories= e =>{
+const pintarcategories = e =>{
    
     e.forEach(item =>{
         const templateCategories = document.getElementById("templateCategories").content;
@@ -157,7 +157,8 @@ const iconoMenu = document.querySelector(".menu__icono--menu");
 const menuDesplegable = document.querySelector(".menu__nav--desplegable")
 const menuDesplegableFondo = document.querySelector(".menu-desplegable__fondo")
 const menuDesplegableProductos = document.getElementById("menuDesplegableProductos");
-
+const menuOcultoListaProductos = document.querySelector("sub-menu-productos--desplegable");
+const menulibotonesnavdesplegable = document.querySelector("menu__nav--imferior");
 
 const toggleMenu = () => {
     menuDesplegable.classList.toggle("visible");
@@ -167,29 +168,20 @@ const toggleMenu = () => {
   
 iconoMenu.addEventListener("click", toggleMenu);
 
-menuDesplegableFondo.addEventListener("click",  () =>{
-    if( menuDesplegable.classList.contains("visible")){
-        menuDesplegable.classList.toggle("visible");
-        menuDesplegableFondo.classList.toggle("visible");
-        document.body.style.overflow = menuDesplegable.classList.contains("visible") ? "hidden" : "auto";
 
-    }
-
-
-    if(getComputedStyle(ulSubMenuProductosInferior).getPropertyValue('display') === 'flex'){
-        document.getElementById("ulSubMenuProductosInferior").classList.toggle("visible");
-        menuDesplegableFondo.classList.toggle("visible");
-        document.body.style.overflow = menuDesplegable.classList.contains("visible") ? "hidden" : "auto";
-        console.log("hola")
-    }
-    
-});
-
-
-
-menuDesplegableProductos.addEventListener("click", () =>{
+const toggleMenuDesplegableProductos = () => {
     ulSubMenuProductosInferior.classList.toggle("visible");
     menuDesplegableFondo.classList.toggle("visible");
     document.body.style.overflow = menuDesplegable.classList.contains("visible") ? "hidden" : "auto";
+};
 
-});
+const clickFondo = () => {
+    ulSubMenuProductosInferior.classList.remove("visible");
+    menuDesplegable.classList.remove("visible");
+    menuDesplegableFondo.classList.toggle("visible");
+};
+  
+iconoMenu.addEventListener("click", toggleMenu);
+
+menuDesplegableProductos.addEventListener('click', toggleMenuDesplegableProductos);
+menuDesplegableFondo.addEventListener('click', clickFondo);
