@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 <!DOCTYPE html>
 <html lang="es">
 	<head>
@@ -165,3 +166,182 @@
 
 	</body>
 </html>
+=======
+
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<title>Pagina personal</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:wght@300&display=swap" rel="stylesheet">
+		<meta name="description" content="Desarrollo web, Desarrollador,frontend">
+		<meta name="keywords" content="Desarrollo web, front end, programador, contratar">
+		<meta name="robots" content="index">
+		<link rel="stylesheet" type="text/css" href="Psass/sass/sassIndex.css">
+		<script src="javaindex.js" defer></script>
+		<script src="https://kit.fontawesome.com/4bb22f668e.js" crossorigin="anonymous"></script>
+	</head>
+
+	<body>		
+		<header class="header desactive" id="header">
+
+			<!-- Icono del menú -->
+			<i class="fa fa-bars header__icon" id="menu-toggle"></i>
+
+			
+			<!-- Logotipo -->
+			<img src="/logo2.png" alt="Logotipo" class="header__logo">
+			
+			<!-- Menú de navegación -->
+			<nav class="header__menu" id="menu">
+				<button onclick="location.href='index.html'" class="header__button header__button--menu">Inicio</button>
+				<button onclick="location.href='proyectos.html'" class="header__button header__button--menu">Proyectos</button>
+			</nav>
+		</header>
+		
+
+		<section class="contenedor contenedor--caratula">
+			<h1 class="titulo titulo--grande">
+				Desarrollador web, Front-end <br>
+				Desarrollador Junior
+			</h1>
+
+			<div class="contenedor contenedor--imagen">
+				<img  class="imagen" src="yair.JPG"></img>
+			</div>
+
+		</section>
+		
+		<section class="cuerpo">
+			<div class="contenedor contenedor--imagenCaratula">
+				<img class="imagen imagen--caratula" src="fondo_desarrollador.png" alt="">
+			</div>
+			
+			<div class="contenedor contenedor--metodologia">
+				<p class="texto texto--metodologia">
+					A la hora de trabajar me gusta hacer un codigo limpio y sencillo de leer para hacer una pagina con acabados finos para que sea 
+					facil de entender y usar para cualquier usuario, para esto uso HTML5, SASS,  bootstrap y javascript, no suelo usar css ya que considero que a la hora de crear proyectos 
+					grandes el css convensional puede complicarse demasiado, por lo que sass con una buena metodologia como es BEM puede hacer que sin importar 
+					el tamaño del proyectose mantega simple y legible.
+				</p>
+			</div>
+	
+			<div class="contenedor contenedor--tecnologias">
+	
+				<div class="contenedor contenedor--tecnologias__tarjetas">
+
+					<img src="imagenFrontend.png" class="imagen imagen--tecnologias">
+
+					<h3 class="titulo titulo--mediano">Frontend</h3>
+
+					<p class="texto texto--tecnologias"> 
+						Desde que descubri sobre el mundo de la 
+						programción, desde entonces e aprendido sobre varios lenguajes
+						y herramientas para especializarme en ser un front-end
+					</p>
+	
+					<h4  class="titulo titulo--pequeño"> Tecnologias que domino</h4>
+	
+					<p class="texto texto--tecnologias"> HTML5, CSS, JavaScript, SASS, Boostrap, JSON, XML</p>
+	
+					<h4  class="titulo titulo--pequeño">Herramientas de trabajo</h4>
+
+					<ul class="lista">
+						<li>Visual Studio Code</li>
+						<li>Github</li>
+						<li>Gitkraken</li>
+						<li>Kodekit</li>
+					</ul>
+				</div>
+	
+				<div class="contenedor contenedor--tecnologias__tarjetas">
+
+					<img src="imagenBackend.png" class="imagen imagen--tecnologias">
+
+					<h3 class="titulo titulo--mediano">Backend</h3>
+
+					<p class="texto texto--tecnologias"> 
+						Aunque gran parte de mis habilidades son de un
+						desarrollador Frontend, tambien conozco algunos conceptos
+						y tecnologias del backend que me ayudan a construir proyectos
+						más diversos y profeionales
+					</p>
+	
+					<h4  class="titulo titulo--pequeño"> Lenguejes que domino</h4>
+	
+					<p class="texto texto--tecnologias"> PHP, MySQL, Java, Python, JavaScript, JSON, XML</p>
+	
+					<h4  class="titulo titulo--pequeño"> Herramientas que utilizo</h4>
+
+					<ul class="lista">
+						<li>Visual Studio Code</li>
+						<li>Github</li>
+						<li>Gitkraken</li>
+					</ul>
+				</div>
+
+				<div class="contenedor contenedor--tecnologias__tarjetas">
+
+					<img src="imagenPlus.png" class="imagen imagen--tecnologias">
+
+					<h3 class="titulo titulo--mediano">Plus</h3>
+					<p class="texto texto--tecnologias"> 
+						Siempre me gusta aprender cosas nuevas y constantemente busco
+						aprender nuevos lenguajes, tecnicas, herramientas o Tecnologias
+						para poder desenvolverme mejor como profesional
+					</p>
+	
+					<h4  class="titulo titulo--pequeño"> Tecnologias que busco aprender</h4>
+	
+					<p class="texto texto--tecnologias"> React, Angular, Laravel, Ruby, Seguridad Informatica</p>
+	
+					<h4  class="titulo titulo--pequeño"> Herramientas que busco aprender</h4>
+
+					<ul class="lista">
+						<li>Linux</li>
+						<li>Terminal</li>
+						<li>API´s de IA</li>
+					</ul>
+				</div>
+		</section>
+
+
+		
+
+		</div>
+
+		<section class="contenedor contenedor--tarjetasProyectos">
+				
+				<div class="cards cards__carrito">
+					
+					<div class="contenedor contenedor--imagenProyectos">
+						
+					</div> 
+
+					
+					<div class="card__content">
+						<h4 class="card__title">Carrito de Compras</h4>
+						<p class="card__description">
+							Un carrito de compras hecho con una API que simula
+							una tienda online donde estan cargados los productos de una
+							tienda para su compra.
+						</p>
+					</div>
+					
+					
+				</div>
+
+				
+
+		</section>
+
+		<footer class="footer">
+
+		</footer>
+
+
+	</body>
+</html>
+>>>>>>> Stashed changes
