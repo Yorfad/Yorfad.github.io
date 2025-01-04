@@ -1,4 +1,4 @@
-const tarjetaProyectos = document.querySelector(".contenedor--tarjetasProyectos");
+const tarjetaProyectos = document.querySelector(".cards__carrito");
 
 tarjetaProyectos.addEventListener("click", e =>{
 
