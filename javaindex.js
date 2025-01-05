@@ -1,3 +1,6 @@
+
+
+/*
 const tarjetaProyectos = document.querySelector(".cards__carrito");
 
 tarjetaProyectos.addEventListener("click", e =>{
@@ -6,6 +9,8 @@ tarjetaProyectos.addEventListener("click", e =>{
 
     window.location.href = url;
 } )
+*/
+
 
 
 // Seleccionamos los elementos
@@ -19,5 +24,4 @@ menuToggle.addEventListener('click', () => {
     header.classList.toggle('active'); // Ajustar el encabezado
     header.classList.toggle('desactive'); // Ajustar el encabezado
 });
-
 
