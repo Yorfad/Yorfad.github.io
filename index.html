@@ -16,15 +16,17 @@
 	</head>
 
 	<body>		
-		<header class="header">
-			<input type="checkbox" class="header__menuDesplegable" id="header__menuDesplegable" hidden>
-			<label for="header__menuDesplegable" class="iconoMenu" ><i class="fa fa-bars" ></i></label>
-			<img src="/logo2.png" class="header header--logo">
-			<nav class="menu" >
-			    <div class="menu__contenedorBotones">
-					<button onclick="location.href='index.html'" class="boton boton--menuDesplegable">Inicio</button>
-					<button onclick="location.href='proyectos.html'" class="boton boton--menuDesplegable">Proyectos</button>
-				</div>
+		<header class="header desactive" id="header">
+			<!-- Ícono del menú -->
+			<i class="fa fa-bars header__menu-icon desactive" id="menu-toggle"></i>
+			
+			<!-- Logotipo -->
+			<img src="/logo2.png" alt="Logotipo" class="header__logo">
+			
+			<!-- Menú de navegación -->
+			<nav class="header__menu" id="menu">
+				<button onclick="location.href='index.html'" class="header__button">Inicio</button>
+				<button onclick="location.href='proyectos.html'" class="header__button">Proyectos</button>
 			</nav>
 		</header>
 
