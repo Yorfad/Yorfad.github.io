@@ -30,80 +30,86 @@
 			</nav>
 		</header>
 
-		<section class="contenedor contenedor--caratula">
-			<h1 class="titulo titulo--grande">
+		<section class="caratula">
+
+			<h1 class="caratula__titulo--grande">
 				Desarrollador web, Front-end <br>
 				Desarrollador Junior
 			</h1>
 
-			<div class="contenedor contenedor--imagen">
-				<img  class="imagen" src="yair.JPG"></img>
-			</div>
+			<img  class="caratula__imagen" src="yair.JPG">
 
 		</section>
+
+
 		
-		<section class="cuerpo">
-			<div class="contenedor contenedor--imagenCaratula">
-				<img class="imagen imagen--caratula" src="fondo_desarrollador.png" alt="">
-			</div>
+		<section class="body">
+				
+			<img class="body__imagen" src="fondo_desarrollador.png" alt="">
 			
-			<div class="contenedor contenedor--metodologia">
-				<p class="texto texto--metodologia">
+			<div class="body__methodology-container">
+
+				<p class="body__text--metodologia">
 					A la hora de trabajar me gusta crear un codigo limpio y sencillo de leer para hacer una pagina con acabados finos para que sea 
 					facil de entender y usar para cualquier usuario, para esto uso HTML5, SASS,  bootstrap y javascript, no suelo usar css ya que considero que a la hora de crear proyectos 
 					grandes el css convensional puede complicarse demasiado, por lo que sass con una buena metodologia como es BEM puede hacer que sin importar 
 					el tamaño del proyectose mantega simple y legible.
 				</p>
+
 			</div>
+
+
 	
-			<div class="contenedor contenedor--tecnologias">
+			<div class="body__cards-container">
 	
-				<div class="contenedor contenedor--tecnologias__tarjetas">
+				<div class="body__card">
 
-					<img src="imagenFrontend.png" class="imagen imagen--tecnologias">
+					<img src="imagenFrontend.png" class="card__imagen">
 
-					<h3 class="titulo titulo--mediano">Frontend</h3>
+					<h3 class="card__title--middle">Frontend</h3>
 
-					<p class="texto texto--tecnologias"> 
+					<p class="card__text"> 
 						Desde que descubri sobre el mundo de la 
 						programción, desde entonces e aprendido sobre varios lenguajes
 						y herramientas para especializarme en ser un front-end
 					</p>
 	
-					<h4  class="titulo titulo--pequeño"> Tecnologias que domino</h4>
+					<h4 class="card__title--small"> Tecnologias que domino</h4>
 	
-					<p class="texto texto--tecnologias"> HTML5, CSS, JavaScript, SASS, Boostrap, JSON, XML, MVC</p>
+					<p class="card__text"> HTML5, CSS, JavaScript, SASS, Boostrap, JSON, XML, MVC</p>
 	
-					<h4  class="titulo titulo--pequeño">Herramientas de trabajo</h4>
+					<h4 class="card__title--small">Herramientas de trabajo</h4>
 
-					<ul class="lista">
+					<ul class="card__list">
 						<li>Visual Studio Code</li>
 						<li>Github</li>
 						<li>Gitkraken</li>
 						<li>Kodekit</li>
 					</ul>
 				</div>
+
+
 	
-				<div class="contenedor contenedor--tecnologias__tarjetas">
+				<div class="body__card">
 
-					<img src="imagenBackend.png" class="imagen imagen--tecnologias">
+					<img src="imagenBackend.png" class="card__imagen">
 
-					<h3 class="titulo titulo--mediano">Backend</h3>
+					<h3 class="card__title--middle">Backend</h3>
 
-					<p class="texto texto--tecnologias"> 
+					<p class="card__text"> 
 						Aunque gran parte de mis habilidades son de un
 						desarrollador Frontend, tambien conozco algunos conceptos
 						y tecnologias del backend que me ayudan a construir proyectos
 						más diversos y profeionales
 					</p>
 	
-					<h4  class="titulo titulo--pequeño"> Lenguejes que domino</h4>
+					<h4  class="card__title--small"> Lenguejes que domino</h4>
 	
-					<p class="texto texto--tecnologias"> SQL, Java, Python, JavaScript, JSON, XML</p>
+					<p class="card__text"> SQL, Java, Python, JavaScript, JSON, XML</p>
 	
-					<h4  class="titulo titulo--pequeño"> Herramientas que utilizo</h4>
+					<h4  class="card__title--small"> Herramientas que utilizo</h4>
 
-					<ul class="lista">
+					<ul class="card__list">
 				
 						<li>Visual Studio Code</li>
 						<li>Github</li>
@@ -111,24 +117,27 @@
 					</ul>
 				</div>
 
-				<div class="contenedor contenedor--tecnologias__tarjetas">
 
-					<img src="imagenPlus.png" class="imagen imagen--tecnologias">
 
-					<h3 class="titulo titulo--mediano">Plus</h3>
-					<p class="texto texto--tecnologias"> 
+				<div class="body__card">
+
+					<img src="imagenPlus.png" class="card__imagen">
+
+					<h3 class="card__title--middle">Plus</h3>
+
+					<p class="card__text"> 
 						Siempre me gusta aprender cosas nuevas y constantemente busco
 						aprender nuevos lenguajes, tecnicas, herramientas o Tecnologias
 						para poder desenvolverme mejor como profesional
 					</p>
 	
-					<h4  class="titulo titulo--pequeño"> Tecnologias que busco aprender</h4>
+					<h4  class="card__title--small"> Tecnologias que busco aprender</h4>
 	
-					<p class="texto texto--tecnologias">.NET, Servicios REST React, Angular, Laravel, Ruby, Seguridad Informatica</p>
+					<p class="card__text">.NET, Servicios REST React, Angular, Laravel, Ruby, Seguridad Informatica</p>
 	
-					<h4  class="titulo titulo--pequeño"> Herramientas que busco aprender</h4>
+					<h4  class="card__title--small"> Herramientas que busco aprender</h4>
 
-					<ul class="lista">
+					<ul class="card__list">
 						<li>Linux</li>
 						<li>Terminal</li>
 						<li>API´s de IA</li>
@@ -139,25 +148,17 @@
 
 		
 
-		</div>
-
-		<section class="contenedor contenedor--tarjetasProyectos">
+		<section class="project">
 				
-				<div class="proyectos">
+				<div class="project__card">
 					
-					<div class="contenedor contenedor--imagenProyectos">
-						
-					</div> 
+					<img src="imagenCarrito.jpeg" class="project__card-imagen">
 
-					
-
-					<p class="texto texto--proyectos">
+					<p class="project__card-text">
 						Carrito de compras
 					</p>
 					
 				</div>
-
-				
 
 		</section>
 
