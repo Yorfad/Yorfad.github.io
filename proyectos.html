@@ -13,31 +13,33 @@
 
 	<body>	
 		
-		<header class="header">
-			<input type="checkbox" class="header__menuDesplegable" id="header__menuDesplegable" hidden>
-			<label for="header__menuDesplegable" class="iconoMenu" ><i class="fa fa-bars" ></i></label>
-			<img src="/logo2.png" class="header header--logo">
-			<nav class="menu" >
-			    <div class="menu__contenedorBotones">
-					<button onclick="location.href='index.html'" class="boton boton--menuDesplegable">Inicio</button>
-					<button onclick="location.href='proyectos.html'" class="boton boton--menuDesplegable">Proyectos</button>
-				</div>
+		<header class="header desactive" id="header">
+			<!-- Ícono del menú -->
+			<i class="fa fa-bars header__menu-icon desactive" id="menu-toggle"></i>
+			
+			<!-- Logotipo -->
+			<img src="/logo2.png" alt="Logotipo" class="header__logo">
+			
+			<!-- Menú de navegación -->
+			<nav class="header__menu" id="menu">
+				<button onclick="location.href='index.html'" class="header__button">Inicio</button>
+				<button onclick="location.href='proyectos.html'" class="header__button">Proyectos</button>
 			</nav>
 		</header>
 
-        <section class="contenedor contenedor--tarjetasProyectos">
+        <section class="projects">
 				
-			<div class="proyectos">
-				<div class="contenedor contenedor--imagen">
-					<img class="imagen" src="imagenCarrito.jpeg">
-				</div>
-				<p class="texto">
+			<div class="project__card">
+
+				<img class="project__card-imagen" src="imagenCarrito.jpeg">
+
+				<p class="project__card-text">
 					Carrito de compras responsive e interactivo con objetos administrados por una base de datos 
 					(API y locarStorage)
 					donde se pueden comprar multiples objetos y manipularlos en el carrito de compras
 				</p>
 
-				<button onclick="location.href='proyectosPortafolio/carritoDeCompras.html'" class="boton boton--pequeño" > Ver </button>
+				<button onclick="location.href='proyectosPortafolio/carritoDeCompras.html'" class="project__card-boton" > Ver </button>
 				
 			</div>
 
