@@ -147,4 +147,4 @@ async function guardarUsuario(usuario) {
       console.error('Error al obtener los datos:', error);
     }
 }
-  
+  /* comentario para commit */
