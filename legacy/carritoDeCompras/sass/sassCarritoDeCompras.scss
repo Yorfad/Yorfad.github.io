@@ -1,0 +1,165 @@
+@use 'header';
+
+*{
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+	font-family: sans-serif;
+}
+
+@mixin cambio-de-tamaño($width, $height, $margin, $padding, $font-size) {
+  width: $width;
+  height: $height;
+  margin: $margin;
+  padding: $padding;
+  font-size: $font-size;
+}
+
+.titulo-productos{
+  @include cambio-de-tamaño(inherit, inherit , inherit , 30px, 50px );
+    
+    @media (max-width: 1000px){
+      @include cambio-de-tamaño(inherit, inherit , inherit , 25px, 40px );
+    }
+
+}
+
+
+
+.contenedor{
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center; 
+  justify-content: center;
+  
+  &-fila-carrito__botones{
+    justify-content: center;
+  }
+  
+  &-fila-carrito__p-cantidad{ 
+      margin: 8px 4px 4px 4px;
+  }
+
+  &-card__precio{
+    align-items: center;
+    margin: 5px;
+  }
+
+  &-carrito{
+    width: 85%;
+    display: flex;
+    justify-content: center;
+    text-align: center; 
+    margin: 5%;
+    padding: 35px;
+  }
+
+}
+
+.card{
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  margin: 20px;
+  height: 270px;
+  min-width: 200px;
+  max-width: 230px;
+
+  &:hover{
+    box-shadow: 2px 0px 11px 7px rgba(128,115,115,0.75);
+  }
+}
+
+.img-card{
+  margin: 10px;
+  height: 140px;
+  max-width: 180px;
+  min-width: 130px;
+}
+
+.footer {
+  background-color: #292c2f;
+  box-sizing: border-box;
+  width: 100%;
+  height: 80px;
+}
+
+
+.table{
+  width: 100%;
+
+  th{
+    padding: 10px;
+  }
+}
+
+
+.boton{
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+  color: #FFF;
+  font-size: 23px;
+  border: none;
+  font-weight: 600;
+  text-decoration: none;
+
+  &--pequeño{
+    margin: auto;
+    padding: 10px 18px;
+  }
+
+  &-card--agregar{
+    width: 70px;
+    padding: 10px;
+    font-size: 15px;
+    color: #ffffff;
+    background-color: #4e5052;
+    border: none;
+
+    &:hover{
+      background-color: #FFF;
+      color: #4e5052;
+      border: 1px ridge #4e5052;
+    }
+  }    
+
+  
+  &-fila-carrito{
+    border: 1px ridge #4e5052;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+    border-right: none;
+    padding: 6px;
+    color: #ffffff;
+    background-color: #36618b;
+  
+    &--aumentar{
+      border: 1px ridge #4e5052;
+      border-top-right-radius: 12px;
+      border-bottom-right-radius: 12px;
+      border-right: none;
+      padding: 6px;
+      color: #ffffff;
+      background-color: #36618b;
+
+      &:hover{
+        background-color: #FFF;
+        color: #4e5052;
+        border: 1px ridge #4e5052;
+      }  
+    }
+
+    &--disminuir{
+
+      &:hover{
+        background-color: #FFF;
+        color: #4e5052;
+        border: 1px ridge #4e5052;
+      }  
+    }
+  }
+}
+
