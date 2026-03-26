@@ -1,42 +1,74 @@
 .header {
 	display: flex;
-	justify-content: center;
+    margin: 25px 5% 120px 5%;
+    justify-content: space-between;
+    align-items: center;
     flex-wrap: wrap;
-    flex-direction: row;
+    flex-direction: column;
+    height: 100px;
+
+    &--logo{
+        height: 70px;
+        width: 60px;
+        margin: 0 15px;
+    }
 }
 
+
 .menu{
-    width: 75%;
-    max-width: 2000px;
+    display: flex;
+    width: 100%;
 
     &__contenedorBotones {
         display: flex; 
+        flex-direction: row;
+        width: 100%;
     }
 }
 
 .iconoMenu{
     display: none;
+    
+}
+
+.header__menuDesplegable:checked ~ .menu{
+    display: flex;
+}
+
+
+.expand{
+    height: 200px;
+}
+
+.fa{
+    font-size: 35px;
+    margin: auto;
+    @media (max-width: 1000px) {
+        font-size: 25px;
+    }
 }
 
 .boton{
-    background-color: #000;
+    background: #892CDC;;
 	display: block;
-	padding: 15px 20px;
+	padding: 15px 25px;
 	color: #FFF;
 	line-height: 28px;
 	font-family: 'Ubuntu', sans-serif;
 	font-weight: 700;
+    font-size: 25px;
 
     &:hover{
         background: #2C3E50;
     }
 
     &--menuDesplegable{
-        font-size: 30px;
         border: none;
-        background-color: #fff;
+        background: #FFF;
         color: #000;
-        transition: all 0.3s ease-out;
+        height: 50px;
+        transition: all 1s ease-out;
+        width: 100%;
 
         &:hover{
             text-decoration: underline;
@@ -50,14 +82,10 @@
         margin: auto;
         padding: 10px 18px;
     }
+
 }
 
-
 @media (max-width: 1000px){
-
-    .header{
-        justify-content: flex-start;
-    }
 
     .iconoMenu{
         display: flex;
@@ -65,37 +93,26 @@
         height: 60px;
         cursor: pointer;
         align-items: center;
-        
     }
 
-    .fa{
-        font-size: 35px;
-        margin: auto;
-        @media (max-width: 1000px) {
-            font-size: 25px;
-        }
-    }
-
-    .boton--menuDesplegable{
-        width: 100%;
-    }
-
-
-    .menu {
+    .menu{
         display: none;
-        margin-top: 60px;
         width: 100%;
-        height: 200px;
-
+    
         &__contenedorBotones {
-            display: flex;
+            display: flex; 
             flex-direction: column;
             width: 100%;
-          }
-
+        }
     }
-
+    
+    .iconoMenu{
+        display: flex;
+        
+    }
+    
     .header__menuDesplegable:checked ~ .menu{
         display: flex;
     }
+
 }

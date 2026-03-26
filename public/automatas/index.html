@@ -1,83 +1,183 @@
 <!DOCTYPE html>
 <html lang="es">
 	<head>
-		<title>Carrito de compras</title>
+		<title>AUTOMATA AFD</title>
 		<meta charset="utf-8">
 		<link rel="preconnect" href="https://fonts.gstatic.com">
 		<link href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:wght@300&display=swap" rel="stylesheet">
 		<meta name="description" content="prohigiene, el amigo de tu salud y enemigo de las bacterias">
 		<meta name="keywords" content="Higiene, prohigiene, gel antibacterial, cuidado">
 		<meta name="robots" content="index">
-		<link rel="stylesheet" type="text/css" href="sass/sassProyectos.css">
+		<link rel="stylesheet" type="text/css" href="sass/sassIndex.css">
 		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1"> 
-		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-		<script src="proyecto.js"  defer></script>
+
 		<script src="https://kit.fontawesome.com/4bb22f668e.js" crossorigin="anonymous"></script>
-		<script src="https://d3js.org/d3.v7.min.js"></script>
-        <script src="https://unpkg.com/nerdamer/nerdamer.core.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/9.4.4/math.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/11.8.0/math.js" integrity="sha512-VW8/i4IZkHxdD8OlqNdF7fGn3ba0+lYqag+Uy4cG6BtJ/LIr8t23s/vls70pQ41UasHH0tL57GQfKDApqc9izA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/11.8.0/math.min.js" integrity="sha512-DmQnZdEjFh4R/040JxDSg3j9cS8D0oC5u2noG9Az18F11leiDFwrTOkm9PP+jdBMiH66QBa73O+54kZr5FyU7w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+		<!-- Cargar Cytoscape -->
+		<script src="https://unpkg.com/cytoscape@3.22.1/dist/cytoscape.min.js"></script>
+
+		<!-- Cargar Cytoscape-edgehandles -->
+		<script src="https://unpkg.com/cytoscape-edgehandles@3.8.0/cytoscape-edgehandles.js"></script>		
+		<script src="proyecto.js"  defer></script>
+
 	</head>
 
 	<body>	
 
 		<header class="header">
-			<input type="checkbox" class="header__menuDesplegable" id="header__menuDesplegable" hidden>
-			<label for="header__menuDesplegable" class="iconoMenu" ><i class="fa fa-bars" ></i></label>
-			<nav class="menu" >
-			    <div class="menu__contenedorBotones">
-					<button onclick="location.href='index.html'" class="boton boton--menuDesplegable">Inicio</button>
-					<button onclick="location.href='proyectos.html'" class="boton boton--menuDesplegable">Proyectos</button>
-				</div>
-			</nav>
+
+			<div class="interior">
+				<a href=""><img src="logo.png"></a>
+				<nav class="navegacion">
+					<ul>
+						<button onclick="window.location.href='index.html'">INICIO</button>
+						<button onclick="window.location.href='Ejemplo1.html'">EJEMPLO 1</button>
+						<button onclick="window.location.href='Ejemplo2.html'">EJEMPLO 2</button>
+						<button onclick="window.location.href='Ejemplo3.html'">EJEMPLO 3</button>
+
+					</ul>
+				</nav>
+			</div>
 		</header>
 
+		<br></br>
+        <br></br>
 
-        <h1 class="titulo">Calculadora</h1>
-		  
+		<hr size="2px" color="black" />
 
-
-		<div class="descripcion">
-			<h3 class="titulo">Derivada</h3>
-			<p class="text">
-				Derivar una función es un concepto fundamental en el cálculo diferencial y tiene varias aplicaciones importantes. 
-				Al derivar una función, obtienes una nueva función que representa la tasa de cambio instantánea de la función original 
-				en cada punto.
-				<br>
-				<br>
-				La derivada de una función se relaciona con la función original de la siguiente manera: en cada punto de la función 
-				original, la derivada nos da la pendiente de la recta tangente a la curva en ese punto. En otras palabras, la derivada 
-				mide cómo está cambiando la función original en cada punto.
-				<br>
-				<br>
-				La relación entre los elementos de entrada y el elemento de salida se ve afectada por la derivación de la función.
-				 Si la derivada de una función es positiva en un punto, significa que la función está aumentando en ese punto. 
-				 Si la derivada es negativa, la función está disminuyendo. Si la derivada es cero, la función tiene un máximo o mínimo 
-				 local en ese punto.
-			</p>
+		<div class="contenedor_título_principal">
+			<h1 class="text">AUTOMATAS AFD</h1>  
 		</div>
+	
+		<hr size="2px" color="black" />
+
+		
+		<section class="section__description">
+
+			<div class="contenedor-entrada">
+				<input type="text" id="nombre" placeholder="Ingresa el nombre del estado...">
+				<button id="agregar-estado" class="boton">
+				  <span>Agregar Estado</span>
+				</button>
+			  </div>
+			  
+			  <div class="contenedor-entrada">
+				<input type="text" id="transicion" placeholder="Ingresa la transición (estadoOrigen,símbolo,estadoDestino)">
+				<button id="agregar-transicion" class="boton">
+				  <span>Agregar Transición</span>
+				</button>
+			  </div>
+			  
+			  <div class="contenedor-entrada">
+				<input type="text" id="simbolos" placeholder="Ingrese símbolos (e.g., a,b,b,a)" />
+				<button id="simular-dfa" class="boton">
+				  <span>Simular AFD</span>
+				</button>
+			  </div>
+			  
+			  <div class="contenedor-entrada">
+				<input type="text" id="estado-inicial" placeholder="Ingrese el estado inicial" />
+				<button id="establecer-estado-inicial" class="boton">
+				  <span>Establecer Estado Inicial</span>
+				</button>
+			  </div>
+			  
+			  <div class="contenedor-entrada">
+				<input type="text" id="estado-final" placeholder="Ingrese estados finales (separados por comas)" />
+				<button id="establecer-estado-final" class="boton">
+				  <span>Establecer Estados Finales</span>
+				</button>
+			  </div>
+
+			  <br></br>
+
+			  <div class="contenedor-entrada">
+				<button id="descargar-txt" class="boton">
+					<span>Descargar Configuración</span>
+				  </button>
+			  </div>
+
+			  <div class="contenedor-entrada">
+				<button id="reset-page" class="boton">
+				  <span>Nuevo</span>
+				</button>
+			  </div>
+			
+			  
+			  
+
+			  <div class="contenedor-entrada">
+				<center>
+				<button id="pausar-simulacion" class="boton">
+				  <span>Pausar</span>
+				</button>
+				<button id="continuar-simulacion" class="boton">
+				  <span>Continuar</span>
+				</button>
+				<button id="retroceder-simulacion" class="boton">
+				  <span>Retroceder</span>
+				</button>
+			    </center>
+			  </div>
+
+			  <br></br>
+			  
+			  <div class="contenedor-entrada">
+				<input type="file" id="archivo-dfa" accept=".txt" />
+				<button onclick="cargarArchivo()" class="boton">
+				  <span>Cargar DFA</span>
+				</button>
+			  </div>
+
+			  <br></br>
+
+			  <div>
+				<input type="checkbox" id="modo-paso" /> Modo Paso a Paso
+			  </div>
+			  <br></br>
+
+			  <div class="contenedor-entrada">
+				<button id="boton-simular" class="boton">Simular DFA</button>
+			  </div>
 
 
-		<div class="contedor contenedor--ingresar-problema">
+			 
 
 
-            <span class="span__textarea">
-                <textarea name="textArea" class="textArea" placeholder="Ingrese el problema"></textarea>
-            </span>
+			  <div>
+				<table id="tabla-transiciones" border="1">
+				  <thead>
+					<tr id="encabezado-simbolos">
+					  <!-- Aquí se agregarán los encabezados de los símbolos -->
+					</tr>
+				  </thead>
+				  <tbody id="cuerpo-tabla">
+					<!-- Aquí se agregarán las filas de la tabla -->
+				  </tbody>
+				</table>
+			  </div>
+			  
 
-            <button class="boton boton--calcular">Calcular</button>
-        </div>
-		 
-		<div class="contenedor contenedor--resultado">
-			<div class="grafico">
+			  
+			
+			  
+			
+			<div class="Contenedor contenedor--temas">
+
+				<div id="cy" style="width: 800px; height: 600px;">
+					
+				</div>
+
+
+
 
 			</div>
 
-			<div class="resultado">
+		</section>
 
-			</div>
-		</div>
+
+
+
+
 
 			
 
