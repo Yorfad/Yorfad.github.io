@@ -117,7 +117,31 @@ export const Home = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-6xl mx-auto">
-            {/* Project Card */}
+            
+            {/* Automatas Project Card */}
+            <Link to="/proyecto/automatas" className="group block bg-white rounded-3xl shadow-md overflow-hidden hover:shadow-2xl transition-all duration-300 border border-gray-100 transform hover:-translate-y-2">
+              <div className="h-56 overflow-hidden relative bg-blue-50 flex items-center justify-center">
+                <div className="absolute inset-0 bg-indigo-900 bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-500 z-10 flex items-center justify-center">
+                    <span className="text-white font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-500 transform translate-y-4 group-hover:translate-y-0">Ver Proyecto completo</span>
+                </div>
+                <img src="/automatas/logo.png" alt="Simulador Automatas" className="w-48 h-48 object-contain group-hover:scale-110 transition-transform duration-700 ease-in-out" />
+              </div>
+              <div className="p-8">
+                <div className="flex justify-between items-center mb-4">
+                  <h3 className="text-2xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors">Simulador DFA</h3>
+                </div>
+                <div className="flex flex-wrap gap-2 mb-4">
+                    <span className="bg-purple-50 text-purple-700 text-xs px-3 py-1.5 rounded-md font-bold uppercase tracking-wide">Algoritmos</span>
+                    <span className="bg-blue-50 text-blue-700 text-xs px-3 py-1.5 rounded-md font-bold uppercase tracking-wide">JS POO</span>
+                    <span className="bg-green-50 text-green-700 text-xs px-3 py-1.5 rounded-md font-bold uppercase tracking-wide">Grafos</span>
+                </div>
+                <p className="text-gray-600 text-base leading-relaxed line-clamp-3">
+                  Simulación interactiva visual con Cytoscape.js de Autómatas Finitos (DFA), implementando algoritmos de validación de lenguaje, parsing .txt y clases de Estado personalizadas.
+                </p>
+              </div>
+            </Link>
+
+            {/* Carrito Project Card */}
             <Link to="/proyecto/carritoDeCompras" className="group block bg-white rounded-3xl shadow-md overflow-hidden hover:shadow-2xl transition-all duration-300 border border-gray-100 transform hover:-translate-y-2">
               <div className="h-56 overflow-hidden relative">
                 <div className="absolute inset-0 bg-blue-900 bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-500 z-10 flex items-center justify-center">
@@ -138,6 +162,7 @@ export const Home = () => {
                 </p>
               </div>
             </Link>
+
           </div>
         </div>
       </section>

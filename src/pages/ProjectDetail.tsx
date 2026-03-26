@@ -20,6 +20,21 @@ export const ProjectDetail = () => {
         'Cálculo de impuestos y totales del carrito en tiempo real',
         'Diseño 100% responsivo'
       ]
+    },
+    'automatas': {
+      title: 'Simulador de Autómatas (DFA) con Grafos',
+      type: 'Algoritmos y Estructura de Datos',
+      description: 'Una simulación interactiva paso a paso de Autómatas Finitos Deterministas (AFD) implementada completamente en Vanilla JS. Utiliza algoritmos de recorrido de grafos interactivos, renderizados dinámicamente con Cytoscape.js para visualizar cómo los estados procesan cadenas de caracteres en tiempo real.',
+      images: ['/automatas/logo.png'],
+      techStack: ['JavaScript (Logica DFA Orientada a Objetos)', 'Teoría de Computación', 'Cytoscape.js (Grafos)', 'SASS', 'Manejo del DOM'],
+      liveUrl: '/automatas/index.html',
+      repoUrl: 'https://github.com/Yorfad/automatasProyecto.github.io', 
+      features: [
+        'Clase State personalizada para emular conexiones de grafos',
+        'Algoritmo lógico de Step-by-Step para visualizar las transiciones (bucle de eventos y time-outs curados)',
+        'Carga y parsing de gramáticas / AFD desde archivos de configuración de texto plano (.txt)',
+        'Renderizado visual de grafos complejos sin requerir frameworks reactivos o canvas'
+      ]
     }
   };
 
