@@ -64,7 +64,7 @@ export const Home = () => {
             {/* Frontend */}
             <div className="bg-white p-10 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
               <div className="text-5xl text-blue-500 mb-6 flex space-x-3">
-                <FaHtml5 /> <FaJs /> <FaSass />
+                <FaHtml5 /> <FaCss3Alt /> <FaJs /> <FaSass />
               </div>
               <h3 className="text-2xl font-bold mb-4 text-gray-900">Frontend</h3>
               <p className="text-gray-600 mb-6 leading-relaxed">Especializado en crear interfaces de usuario responsivas, accesibles y dinámicas.</p>
